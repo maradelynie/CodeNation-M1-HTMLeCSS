@@ -1,6 +1,8 @@
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
+/* --------------------------------------------------Resets & global config */
+
 * {
 	box-sizing: border-box;
 }
@@ -10,18 +12,26 @@ ul, ol{
 	padding-inline-start: 0px;
 
 }
+
+li{
+	display: inline-block;
+	list-style: none;
+}
+
 a{
 	text-decoration: none;
 }
 body{
+	
 	font-family: Montserrat, sans-serif;
 	font-size: 10px;
 }
-li {
-	list-style: none;
-}
+
+
+/* ----------------------------------------------------header/topo */
+
 header{
-	background-image: url(/img/capa-madmax2.jpg);
+	background-image: url(../img/capa-madmax2.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -29,13 +39,12 @@ header{
 }
 
 .gradiente{
-
 	background: rgb(0,0,0);
 	background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
 	
 }
 
-header .conteiner {
+.banner {
 	
 	display: flex;
     flex-direction: column;
@@ -47,22 +56,9 @@ header .conteiner {
 	margin: 0 auto;
 	padding: 20px 0;
 
-	
-}
-header .top-header a li {
-	color: white;
-	transition: .2s;
-	margin: 0 25px;
 }
 
-header a:hover{
-	color: #e4bb23;
-	
-}
-
-.top-header {
-	font-weight: bold;
-	color: whitesmoke;
+.topheader {
 	
 	display: flex;
 	align-items: center;
@@ -70,46 +66,58 @@ header a:hover{
 	justify-content: space-between;
 	font-size: 1.3em;
 }
-.top-header nav ul{
-	
-	display: flex;
-	
-	justify-content: space-between;
-}
-
-header nav, header ul,header  li {
-    
+.lista {
 	display: inline-block;
 	text-transform: uppercase;
 }
-.user{
+
+.lista a{
+	color: whitesmoke;
+	transition: .2s;
+}
+.lista a:hover{
+	color: #e4bb23;
+}
+.lista__item{
+	margin: 20px;
+	font-weight: bold;
 	
+}
+.lista__item--thin{
+	margin-right: 15px;
+	
+}
+
+.user{
+	font-weight: bold;
+	color: whitesmoke;
 	display: inherit;
 	align-items: inherit;
 	
 }
-.user img {
+
+.user__avatar {
 	border-radius: 50%;
 	margin-right:15px;
 	max-width: 45px;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-.filme-destaque {
+.filmeDestaque {
 	margin: 0px 0px 50px ;
 	color: white;
-	font-size: 1em;
+	font-size: 1.3em;
 	
 }
 
-.filme-destaque h2{
+.filmeDestaque__titulo{
 	font-size: 6.5em;
     font-weight: bold;
     line-height: 1.2em;
 	margin-bottom: 15px;
 }
 
-.filme-destaque button{
+.filmeDestaque__button{
 	
 	display: block;
 	color: black;
@@ -118,30 +126,23 @@ header nav, header ul,header  li {
 	padding: 15px 50px;
 	margin: 30px 0;
 	border-radius: 40px;
-	transition: .2s;
+	
 	font-size: 1.3em;
 }
 
-.filme-destaque button:hover{
+.filmeDestaque__button:hover{
 	opacity: .8;
 }
 
-.filme-destaque span{
+.filmeDestaque__span{
 	color: #e4bb23;
 }
 
-.filme-destaque li{
-	
-	font-size: 1.3em;
-	color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-}
-.filme-destaque p, .filme-destaque span{
-	font-size: 1.3em;
-}
+
+/* -----------------------------------------------------------------main */
+
+/* -----------------------------------------------------------------------BEM CSS */
+
 
 section{
 	background-color: #f2f2f2;
